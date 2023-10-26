@@ -1,0 +1,9 @@
+{%extends "registration/layout.html"%}
+{%block body%}
+       <h1>Create a Studnet</h1>
+       <form action="{% url 'createStudent'%}" method="post">
+        {%csrf_token%}
+        {{form}}
+        <input type="submit", value="add student">
+       </form>
+{%endblock%}

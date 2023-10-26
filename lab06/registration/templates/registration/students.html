@@ -1,0 +1,11 @@
+{%extends "registration/layout.html"%}
+{%block body%}
+        <h1>Students</h1>
+        {% for student in students %}
+        <ul>
+            <li><a href="{% url 'details' student.id %}">view details</a>{{student}}</li>
+        </ul>
+        {%endfor%}
+        <h1>add a student:</h1>
+        <a href="{%url 'createStudent'%}">here!</a>
+{%endblock%}

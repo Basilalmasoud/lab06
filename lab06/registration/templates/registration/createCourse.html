@@ -1,0 +1,9 @@
+{%extends "registration/layout.html"%}
+{%block body%}
+       <h1>Create a Course</h1>
+       <form action="{% url 'createCourse'%}" method="post">
+        {%csrf_token%}
+        {{form}}
+        <input type="submit", value="add course">
+       </form>
+{%endblock%}

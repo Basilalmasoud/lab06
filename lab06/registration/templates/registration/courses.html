@@ -1,0 +1,9 @@
+{%extends "registration/layout.html"%}
+{%block body%}
+        <h1>Avaliable Courses</h1>
+        {% for course in courses %}
+        <ul>
+            <li>{{course}}</li>
+        </ul>
+        {%endfor%}
+{%endblock%}
